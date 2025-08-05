@@ -24,4 +24,7 @@ git clone https://github.com/LeticiaParreiras/postit
 cd postit
 python main.py
 ```
-
+# To-do
+- [ ] função de fixa ou desfixar a jenala ao topo
+- [ ] função pra abrir nova post - it
+- [ ] menu pra mudar as cores
