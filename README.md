@@ -25,6 +25,6 @@ cd postit
 python main.py
 ```
 # To-do
-- [ x ] função de fixa ou desfixar a jenala ao topo
+- [x] função de fixa ou desfixar a jenala ao topo
 - [ ] função pra abrir nova post - it (Precisando corrigir o bug)
-- [ x ] menu pra mudar as cores
+- [x] menu pra mudar as cores

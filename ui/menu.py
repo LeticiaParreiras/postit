@@ -29,4 +29,4 @@ def criar_menu(menu, text_widget, frame_widget, estado, window, nova_janela):
     menu.add_cascade(label="Mudar cor", menu=change_color_menu)
     menu.add_command(label="Fixar", command=lambda: toggle_topmost(window, estado, menu))
     menu.add_command(label="Salvar", command=lambda: salvar_arquivo(text_widget))
-    menu.add_command(label="Novo", command=nova_janela)
+    menu.add_command(label="Novo Post It", command=nova_janela)
