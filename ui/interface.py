@@ -13,8 +13,8 @@ def criar_interface():
     text_widget = tk.Text(window, bg=estado["color"], font=("Arial", 14), height=10, width=30, pady=10)
     text_widget.pack()
 
-    bold_font = font.Font(weight="bold")
-    italic_font = font.Font(slant="italic")
+    bold_font = font.Font(weight="bold", family="Arial", size=14)
+    italic_font = font.Font(slant="italic", family="Arial", size=14)
     text_widget.tag_configure("bold", font=bold_font)
     text_widget.tag_configure("italic", font=italic_font)
     text_widget.tag_configure("highlightline", background="yellow", relief="raised")
@@ -42,8 +42,8 @@ def nova_janela():
     text_widget = tk.Text(new_window, bg=estado["color"], font=("Arial", 14), height=10, width=30, pady=10)
     text_widget.pack()
 
-    bold_font = font.Font(weight="bold")
-    italic_font = font.Font(slant="italic")
+    bold_font = font.Font(weight="bold", family="Arial", size=14)
+    italic_font = font.Font(slant="italic", family="Arial", size=14)
     text_widget.tag_configure("bold", font=bold_font)
     text_widget.tag_configure("italic", font=italic_font)
     text_widget.tag_configure("highlightline", background="yellow", relief="raised")
