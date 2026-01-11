@@ -8,15 +8,18 @@ Um pequeno editor de notas feito com Python e Tkinter, com suporte a formataçã
 - Negrito (`N`) e Itálico (`I`) aplicáveis à seleção de texto
 - Adição de marcadores (`•`)
 - Destaque de linha com fundo amarelo (`H`)
-- Salvamento do conteúdo em arquivo `.txt`
+- Salvar, carregar notas e deletar
+- Extrair conteúdo em arquivo `.txt`
+- Fixar janela
 
+## 🚀 Download
 
-## 🖥️ Pré-requisitos
+Baixe a versão mais recente em [Releases](https://github.com/LeticiaParreiras/postit/releases)
 
-- Python 3.6 ou superior
+# Preview
+![](assets/images/preview.png)
 
-## 📦 Instalação
-
+## 🛠️ Desenvolvimento
 Clone o repositório:
 
 ```
@@ -24,5 +27,18 @@ git clone https://github.com/LeticiaParreiras/postit
 cd postit
 python main.py
 ```
-# Preview
-<img width="1379" height="939" alt="image" src="https://github.com/user-attachments/assets/e066f3ec-885e-4048-820e-186b63f298bf" />
+### Criar Executável
+
+```
+pip install -U pyinstaller
+pyinstaller --onefile --noconsole --add-data "assets/images;assets/images" --icon=notas.ico --name="Post It" main.py
+```
+
+## 🤝 Contribuindo
+Contribuições são bem-vindas! Sinta-se livre para solicitar pull request ou abrir uma issue!
+
+## 📝 Licença
+Este projeto está licenciado sob a MIT License
+
+## 👨‍💻 Autor
+Desenvolvido com ❤️ por Leticia Parreiras
