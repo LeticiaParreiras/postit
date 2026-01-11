@@ -3,9 +3,10 @@ import tkinter as tk
 from tkinter import Menu, font
 from ui.menu import criar_menu
 from ui.buttons import criar_botoes
+from core.storage import salvar_postit
 
 def criar_interface():
-    estado = {"color": choose_random_color(), "topmost": False }
+    estado = {"color": choose_random_color(), "topmost": False, "id": None}
     window = tk.Tk()
     window.title("Post It")
     window.configure(bg=estado["color"])
@@ -32,8 +33,7 @@ def criar_interface():
     window.mainloop()
 
 def nova_janela():
-   
-    estado = {"color": choose_random_color(), "topmost": False, }
+    estado = {"color": choose_random_color(), "topmost": False, "id": None}
     new_window = tk.Toplevel()
     
     new_window.title("Post It")
