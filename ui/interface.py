@@ -11,8 +11,8 @@ def criar_interface():
     window.title("Post It")
     window.configure(bg=estado["color"])
 
-    text_widget = tk.Text(window, bg=estado["color"], font=("Arial", 14), height=10, width=30, pady=10)
-    text_widget.pack()
+    text_widget = tk.Text(window, bg=estado["color"], font=("Arial", 14), height=10, width=30, pady=10, relief="flat",borderwidth=0, highlightthickness=0)
+    text_widget.pack(padx=0, pady=0)
 
     bold_font = font.Font(weight="bold", family="Arial", size=14)
     italic_font = font.Font(slant="italic", family="Arial", size=14)
@@ -22,8 +22,8 @@ def criar_interface():
 
     menu_bar = Menu(window)
     window.config(menu=menu_bar)
-    frame = tk.Frame(window, bg=estado["color"])
-    frame.pack()
+    frame = tk.Frame(window, bg=estado["color"], borderwidth=0,highlightthickness=0)
+    frame.pack(padx=0, pady=0)
     
     criar_menu(menu_bar, text_widget, frame, estado, window, nova_janela)
     criar_botoes(frame, estado, text_widget)
@@ -39,8 +39,8 @@ def nova_janela():
     new_window.title("Post It")
     new_window.configure(bg=estado["color"])
 
-    text_widget = tk.Text(new_window, bg=estado["color"], font=("Arial", 14), height=10, width=30, pady=10)
-    text_widget.pack()
+    text_widget = tk.Text(new_window, bg=estado["color"], font=("Arial", 14), height=10, width=30, pady=10, relief="flat",borderwidth=0, highlightthickness=0)
+    text_widget.pack(padx=0, pady=0)
 
     bold_font = font.Font(weight="bold", family="Arial", size=14)
     italic_font = font.Font(slant="italic", family="Arial", size=14)
@@ -50,8 +50,8 @@ def nova_janela():
 
     menu_bar = Menu(new_window)
     new_window.config(menu=menu_bar)
-    frame = tk.Frame(new_window, bg=estado["color"])
-    frame.pack()
+    frame = tk.Frame(new_window, bg=estado["color"], borderwidth=0,highlightthickness=0 )
+    frame.pack(padx=0, pady=0)
     
     criar_menu(menu_bar, text_widget, frame, estado, new_window, nova_janela)
     criar_botoes(frame, estado, text_widget)
