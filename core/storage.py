@@ -8,7 +8,7 @@ def salvar_postit(conteudo, estado):
     """Salva um novo post-it no arquivo JSON"""
     if estado.get("id"):
         atualizar_postit(estado, conteudo)
-        return id
+        return estado
     dados = carregar_postits()
     novo_postit = {
         "id": len(dados) + 1,
@@ -19,7 +19,7 @@ def salvar_postit(conteudo, estado):
     dados.append(novo_postit)
     _escrever_json(dados)
     estado["id"] = novo_postit["id"]
-    return novo_postit
+    return estado
 
 def carregar_postits():
     """Carrega todos os post-its do arquivo JSON"""
@@ -31,11 +31,13 @@ def carregar_postits():
             return []
     return []
 
-def deletar_postit(postit_id):
-    """Deleta um post-it pelo ID"""
+def deletar_postit(estado, text_widget):
+    """Deleta um post-it pelo ID e limpa a interface"""
     dados = carregar_postits()
-    dados = [p for p in dados if p["id"] != postit_id]
+    dados = [p for p in dados if p["id"] != estado["id"]]
     _escrever_json(dados)
+    text_widget.delete("1.0", "end")
+    estado["id"] = None
 
 def atualizar_postit(estado, conteudo ):
     """Atualiza um post-it existente"""
@@ -47,6 +49,7 @@ def atualizar_postit(estado, conteudo ):
             postit["data_atualizacao"] = datetime.now().isoformat()
             break
     _escrever_json(dados)
+    
 
 def _escrever_json(dados):
     """Escreve dados no arquivo JSON"""
