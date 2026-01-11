@@ -23,5 +23,7 @@ def criar_botoes(frame, estado, text_widget):
             bd=0,
             relief="flat",
             cursor="hand2",
+            pady= 8,
+            padx= 8,
         )
-        b.grid(row=0, column=i)
+        b.grid(row=0, column=1 + i, padx=20, pady=20)

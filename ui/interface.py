@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import Menu, font
 from ui.menu import criar_menu
 from ui.buttons import criar_botoes
-from core.storage import salvar_postit
 
 def criar_interface():
     estado = {"color": choose_random_color(), "topmost": False, "id": None}
